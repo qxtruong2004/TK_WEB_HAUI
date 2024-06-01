@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .variable{
+            height: 30px;
+            width: 30px;
+        }
+        #algo, #algo-process{
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="variable" onclick="current_number()">1</button>
+        <button class="variable" onclick="current_number()">2</button>
+        <button class="variable" onclick="current_number()">3</button>
+        <button class="variable" onclick="current_number()">4</button>
+        <button class="variable" onclick="current_number()">5</button>
+        <button id="algo">+</button>
+    </div>
+    <div>
+        <button class="variable" onclick="current_number()">6</button>
+        <button class="variable" onclick="current_number()">7</button>
+        <button class="variable" onclick="current_number()">8</button>
+        <button class="variable" onclick="current_number()">9</button>
+        <button class="variable" onclick="current_number()">0</button>
+        <button id="algo-process" onclick="process()">=</button>
+    </div>
+    <div id="algo-result"></div>
+<!-- JS xử lí phép cộng -->
+    <script>
+        // hàm nhận số
+        function current_number(){
+            var a = document.getElementsByClassName("variable1");
+            console.log(a);
+        }
+        function process(){
+            window.alert('Kết quả của phép tính là: ')
+        }
+    </script>
+</body>
+</html>

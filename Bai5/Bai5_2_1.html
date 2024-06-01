@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Giải phương trình ax<sup>2</sup> + bx + c = 0
+        với a = 4, b = 6, c = 2
+    </span>
+    <br>
+    <!-- JS xử lí đoạn code -->
+    <script>
+       function canbac2(){
+            var a = 4;
+            var b = 6;
+            var c = 2;
+            var delta = b*b -4*a*c;
+            if(delta > 0){
+                var x1 = (-b + Math.sqrt(delta)) / (2*a);
+                var x2 = (-b - Math.sqrt(delta)) / (2*a);
+                document.write("Phương trình đã cho có 2 nghiệm là: x1 =", x1, " x2 = ", x2);
+            }
+            else if (delta == 0) {
+                var x = -b/2*a;
+                document.write("Phương trình đã cho có nghiệm kép là: ", x);
+            } 
+            else {
+                document.write("Phương trình đã cho vô nghiệm");
+            }
+        }
+        canbac2();
+    </script>
+</body>
+</html>

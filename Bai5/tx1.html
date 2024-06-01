@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background-color: burlywood;
+           
+            width: 100%;
+            height: 100px;
+        }
+        .header-text{
+            padding: 10px;
+        }
+        .header-menu{
+            width: 100%;
+            background-color: chartreuse;
+        }
+        .menu{
+            display: flex;
+        }
+        .menu-info{
+            margin-left: 10px;
+            padding: 5px 0;
+            list-style-type: none;
+            width: 20%;
+            border-right: 5px solid #fff;
+        }
+        .menu-info:first-child {
+            border-left: none; /* Loại bỏ viền bên trái của thẻ li đầu tiên */
+        }
+        .menu-info:last-child {
+            border-right: none; /* Loại bỏ viền bên phải của thẻ li cuối cùng */
+        }
+       
+        .nav-left{
+            width: 19%;
+            height: 500px;
+            background-color: burlywood;
+        }
+        .nav-left-img1{
+            padding-top: 10px;
+            width: 100%;
+            height: 140px;
+        }
+        .nav-left-img2{
+            padding-top: 10px;
+            width: 100%;
+            height: 140px;
+        }
+        .about{
+            display: flex;
+        }
+        .content{
+            width: calc(100% - 19%);
+            padding: 15px 100px 0 15px;
+        }
+        .content-title{
+            margin-bottom: 15px;
+        }
+        .content-paragrah{
+            margin-bottom: 5px;
+        }
+        footer{
+            margin-top: 15px;
+            width: 100%;
+            height: 100px;
+            background: #f3863d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-img{
+            height: 50%;
+           padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-text">
+            TRANG WEB DEMO HỌC PHẦN THIẾT KẾ WEB
+        </h1>
+    </header>
+    <div class="header-menu">
+        <ul class="menu">
+            <li class="menu-info">TRANG CHỦ</li>
+            <li class="menu-info">GIỚI THIỆU</li>
+            <li class="menu-info">TIN TỨC</li>
+            <li class="menu-info">ĐÀO TẠO</li>
+            <li class="menu-info">LIÊN HỆ</li>
+        </ul>
+    </div>
+    <div class="about">
+        <div class="nav-left">
+            <img class="nav-left-img1" src="https://i1-thethao.vnecdn.net/2024/03/24/screenshot-2024-03-24-at-03-25-2599-2080-1711225646.png?w=1020&h=0&q=100&dpr=1&fit=crop&s=4KjY_pqnQZQHkpkaFkEV8Q" alt="">
+            <img class="nav-left-img2" src="https://media.bongda.com.vn/resize/630x421/files/anh.nguyen/2024/03/27/4-0453.png" alt="">
+            <p style="padding: 5px 5px 0 5px;">Không mất quá nhiều thời gian, tỷ số đã được quân bình 1-1 với bàn thắng của hậu vệ cánh Mittelstadt với pha dứt điểm ngoài vòng cấm đẹp mắt</p>
+        </div>
+        <div class="content">
+            <h2 class="content-title" >Nhận định trước trận đấu</h2>
+            <p class="content-paragrah">Đức vừa gây tiếng vang lớn khi có chiến thắng 2-0 trước tuyển Pháp. Chiến thắng này cũng giúp đội chủ nhà EURO giảm được tối đa áp lực sau khi họ chịu 2 thất bại liên tiếp trước đó trước Thổ Nhĩ Kỳ và Áo.</p>
+            <p class="content-paragrah"> Còn Hà Lan đang có phong độ rất cao. 4 trận liên tiếp, "cơn lốc màu cam" toàn thắng. Hàng công của Hà Lan ghi tới 12 bàn trong khi không để lọt lưới bàn nào.</p>
+            <h2 class="content-title"> Đội hình dự kiến</h2>
+            <p class="content-paragrah">
+                <b>Đức: </b> Ter Stegen; Kimmich, Rudiger, Tah, Mittelstadt; Andrich, Kroos, Musiala, Gundogan, Wirtz; Fullkrug
+            </p>
+            <p class="content-paragrah">
+               <b> Hà Lan: </b> Flekken; Dumfries, Geertruida, Van Dijk, Ake; Veerman, Wijnaldum, Reijnders; Simons, Gakpo, Depay
+            </p>
+            <h2 class="content-title">Diễn biến trận đấu</h2>
+            <p class="content-paragrah">
+                Dù làm khách, nhưng Hà Lan bất ngờ có bàn thắng mở tỷ số từ rất sớm. Ngay phút thứ 4, Veerman dứt điểm tung lưới Đức sau đường chuyền như đặt của Depay.
+            </p>
+            <p class="content-paragrah">
+                Mặc dù vậy, "Cỗ xe tăng" không mất nhiều thời gian để áp đặt thế trận. Phút 11, Mittelstadt gỡ hòa cho người Đức bằng một siêu phẩm từ ngoài vòng cấm không cho thủ thành Verbruggen cơ hội nào.
+            </p>
+            <p class="content-paragrah">Trong khoảng thời gian còn lại của trận đấu, Đức gây sức ép về phía khung thành Hà Lan khiến hàng thủ đội bóng áo màu da cam không thể đứng vững.</p>
+            <p class="content-paragrah">5 phút trước khi hết giờ, Fullkrug lập công ấn định chiến thắng 2-1 đầy ấn tượng cho đội chủ nhà. Đây là trận thứ hai liên tiếp của chủ nhà Euro 2024 dưới thời HLV Julian Nagelsmann.</p>
+        </div>
+    </div>
+</body>
+<footer>
+   <img src="data:image/jpeg;base64,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" alt="" class="footer-img">
+    <p><b>Bản quyền thuộc về Germany's Football Team</b></p>
+</footer>
+</body>
+</html>

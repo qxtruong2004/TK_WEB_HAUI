@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="menu" style="display: flex; justify-content: center;">
+        <form action="">
+            <table>
+                <tr colspan="2">
+                    <td><label for="">User Name: </label></td>
+                    <td><input type="text" id="user" required></td>
+                </tr>
+                <tr colspan="2">
+                    <td><label for="">Pass word: </label></td>
+                    <td><input type="text" id="pass" required></td>
+                </tr>
+                <tr colspan="2" >
+                    <td></td>
+                    <td><button onclick="check()" >Kiểm tra password</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        function check(){
+            let us = document.getElementById("user").value;
+            let ps = document.getElementById("pass").value;
+            
+            //kiểm tra pass word xem có chứa ít nhất 1 kí tự in hoa khônh
+            var inhoa = /[A-Z]/.test(ps);
+            // if(!inhoa){
+            //     alert("Bạn nhập sai");
+            // }
+
+            //kiểm tra xem pass có kí tự đầu là sosoo không
+            var first = /^\d/.test(ps);
+            // if(first){
+            //     alert("Bạn nhập sai");
+            // }
+            if (ps.length === 0 && us.length === 0){
+                
+            }
+            else if(ps.length < 8 || !inhoa || first){
+                alert("Bạn nhập sai");
+            }
+            else{
+                alert("Bạn nhập đúng");
+            }
+        }
+    </script>
+</body>
+</html>

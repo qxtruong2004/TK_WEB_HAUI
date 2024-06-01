@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <label for="">Số thứ nhất</label>
+    <input onkeyup="result()" type="text" id="number1" name="number1"> <br>
+    <button onclick="nhap('+')">+</button>
+    <button onclick="nhap('-')">-</button>
+    <button onclick="nhap('*')">*</button>
+    <button onclick="nhap('/')">/</button>
+    <button onclick="nhap('**')">^</button>
+    <br>
+    <label for="">Số thứ hai</label>
+    <input onkeyup="result()" type="text" id="number2" name="number2">
+    <br>
+    <label for="">Kết quả</label>
+    <input type="text" name="result" id="result">
+
+    <script>
+        let s = "";
+        let operator = "";
+
+        function nhap(op){
+            operator = op;
+            result();
+        }
+
+        function result(){
+            //ở đây phải ép kiểu vì nếu để không sẽ ở dạng String và khi thực hiện dấu cộng sẽ nối chuỗi thay vi cộng
+            var x = parseFloat(document.getElementById("number1").value);
+            var y = parseFloat(document.getElementById("number2").value);
+            var result_show = document.getElementById("result");
+
+            switch (operator) {
+                case '+':
+                    result_show.value = x + y;
+                    break;
+                case '-':
+                    result_show.value = x - y;
+                    break;
+                case '*':
+                    result_show.value = x * y;
+                    break;
+                case '/':
+                    result_show.value = y !== 0 ? x / y : 'Infinity';
+                    break;
+                case '**':
+                    result_show.value = Math.pow(x, y);
+                    break;
+                default:
+                    result_show.value = "";
+            }
+        }
+    </script>
+</body>
+</html>

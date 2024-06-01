@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr colspan="2">
+            <td>Nhập chuỗi: </td>
+            <td><input type="text" name="chuoi" id="chuoi"></td>
+        </tr>
+        <tr colspan="2">
+            <td>Nhập từ: </td>
+            <td><input type="text" name="tu" id="tu"></td>
+        </tr>
+        <tr colspan="2">
+            <td>Thông báo: </td>
+            <td><input type="text" name="rs" id="rs"></td>
+        </tr>
+        <tr colspan="1">
+            <td><button onclick="check()">Kiểm tra</button></td>
+            <td><button onclick="huy()">Huy bo</button></td>
+        </tr>
+    </table>
+
+    <script>
+        function check(){
+            let doan = document.getElementById("chuoi").value;
+            let tu = document.getElementById("tu").value;
+
+            //tách chuỗi thành các mảng từ
+            let words = doan.split(/\s+/);
+            let cnt = 0;
+            for(let i = 0; i < words.length; i++){
+                if(words[i] === tu){
+                    cnt++;
+                }
+            }
+            let notice = document.getElementById("rs");
+            notice.value = `Từ ${tu} , xuất hiện: ${cnt} lần`;
+        }
+
+        function huy(){
+            document.getElementById("chuoi").value = "";
+            document.getElementById("tu").value = "";
+            document.getElementById("rs").value = "";
+        }
+    </script>
+</body>
+</html>

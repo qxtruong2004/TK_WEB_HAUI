@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        let name = ["th","st","nd","rd"];
+        
+        for (let index = 0; index < color.length; index++) {
+            if ( index < 3) {
+                console.log(`"${parseInt((index+1)) + name[index+1]} choice is ${color[index]}."`);
+            } else {
+                console.log(`"${parseInt((index+1)) + name[0]} choice is ${color[index]}."`);
+            }
+        }</script>
+</body>
+</html>

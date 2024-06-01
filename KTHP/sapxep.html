@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" style="display: flex; justify-content: center;">
+        <table b>
+            <caption>Sắp xếp mảng</caption>
+            <tr colspan="2">
+                <td>Nhập mảng: </td>
+                <td><input type="text" id="nhap"></td>
+            </tr>
+            <tr colspan="2">
+                <td>Mảng sau khi sắp xếp: </td>
+                <td><input type="text" id="rs"></td>
+            </tr>
+            <tr colspan="1" style="text-align: center;">
+                <td colspan="2">
+                    <button onclick="huy()"> Hủy</button>
+                    <button type="button" onclick="sapxep()">Sắp xếp</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function sapxep(){
+            // Lấy giá trị từ input và chuyển đổi thành mảng số nguyên
+            const input = document.getElementById("nhap").value;
+            let array = input.split(',').map(Number);
+
+            // Tạo các mảng riêng cho số chẵn, số lẻ và số 0
+            let chan = [];
+            let le = [];
+            let zeroNumbers = [];
+
+            // Phân loại các phần tử
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === 0) {
+                    zeroNumbers.push(array[i]);
+                } else if (array[i] % 2 === 0) {
+                    chan.push(array[i]);
+                } else {
+                    le.push(array[i]);
+                }
+            }
+            // Ghép các mảng lại theo thứ tự chẵn, 0, lẻ
+            let sortedArray = chan.concat(zeroNumbers, le);
+            //document.getElementById("rs").innerText = sortedArray.join(',');
+            // Hiển thị kết quả
+            document.getElementById('rs').value = sortedArray.join(',');
+        
+        }
+    </script>
+</body>
+</html>

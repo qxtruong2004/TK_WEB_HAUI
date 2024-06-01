@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bang" style="display: flex; justify-content: center;">
+        <table>
+            <tr colspan="4">
+                <td>Tháng: </td>
+                <td><input type="text" name="month" id="month"></td>
+                <td>Năm: </td>
+                <td><input type="text" name="year" id="year"></td>
+            </tr>
+            <tr colspan="2">
+                <td>Số ngày: </td>
+                <td><input type="text" name="day" id="day"></td>
+            </tr>
+            <tr colspan="1">
+                <td><button onclick="check()">Hiển thị số ngày</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function check(){
+            let month = parseInt(document.getElementById("month").value);
+            let year = parseInt(document.getElementById("year").value);
+            switch(month){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    let vl = document.getElementById("day");
+                    vl.value = `31`;
+                    break;
+                case 2:
+                    if(year % 4 === 0){
+                        let vl0 = document.getElementById("day");
+                        vl0.value = `29`;
+                        
+                    }
+                    else{
+                        let vl0 = document.getElementById("day");
+                        vl0.value = `28`;
+                       
+                    }
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    let vl1 = document.getElementById("day");
+                    vl1.value = `30`;
+                    break;
+                
+                default:
+                    let vl3 = document.getElementById("day");
+                    vl3.value = ` Tháng không hợp lệ`
+            }
+        }
+    </script>
+</body>
+</html>

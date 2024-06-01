@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #four_1_3{
+        padding: 25px;
+        margin: 25px;
+        width: 200px;
+        background-color: aquamarine;
+        border: 25px solid blue;
+    }
+    header{
+        height: 100px;
+    }
+    .menu{
+        margin-right: 100px;
+        height: 30px;
+        background-color: #420000;
+        color: #fff;
+        
+    }
+    .menu-list{
+        line-height: 30px;
+        
+        /* list-style-type: none; */
+    }
+    .menu-list-text{
+        padding-right: 100px;
+        float: left;
+        list-style-type: none;
+    }
+    .body {
+    color: #fff;
+    margin-top: 5px;
+    position: relative;
+    }
+    .Sidebarleft {
+        width: 204px;
+        background-color: #9D6F68; 
+        height: 100%;
+        float: left;
+        position: absolute;
+    }
+    .Sidebarleft-text{
+        padding-left: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: calc(100% / 7);
+    }
+    .content {
+        margin-left: 209px; /* Đảm bảo content không bị đè bởi Sidebarleft */
+        color: #000;
+        width: calc(100% - 209px - 100px); /* Chiều rộng của content là 100% trừ đi width của Sidebarleft và margin-left */
+        display: inline-block;
+    }
+    footer{
+    }
+</style>
+<body>
+    <h1>This is a Heading</h1>
+    <p style="border: 5px dotted red;">This is a paragraph.</p>
+    <!-- bai 4.1.2 -->
+    <h1>This is a Heading</h1>
+    <p style="padding-top: 30px; background-color: dodgerblue;">This is a paragraph</p>
+    <!-- bai 4.1.3 -->
+    <div id="four_1_3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus expedita laboriosam explicabo omnis corporis sequi mollitia dignissimos quis, obcaecati, illo facere delectus quaerat laborum ab vel similique illum vero libero!
+    </div>
+
+    <!-- bai 4.1.4 -->
+    <div class="web" style=" background-color: #FACFCF;">
+        <div class="main" style="width: 960px; margin-left: calc(100% - 960px);">
+            <header>
+                <h1 style="height: 70px; line-height: 70px;">
+                    <span style="color: aliceblue;">SLick</span><span>Red</span>
+                </h1>
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-list-text">Home</li>
+                        <li class="menu-list-text">About</li>
+                        <li class="menu-list-text">Products</li>
+                        <li class="menu-list-text">Services</li>
+                        <li class="menu-list-text">Design</li>
+                    </ul>
+                </div>
+            </header>
+            <div class="body">
+                <div class="Sidebarleft">
+                    <p class="Sidebarleft-text">Links</p>
+                    <p class="Sidebarleft-text">SEO</p>
+                    <p class="Sidebarleft-text">PHP</p>
+                    <p class="Sidebarleft-text">Ajax</p>
+                    <p class="Sidebarleft-text">JQuery</p>
+                    <p class="Sidebarleft-text">Internet Marketing</p>
+                    <p class="Sidebarleft-text">XHTML Templates</p>
+                </div>
+                <div class="content">
+                    <p>
+                        <h2>
+                            You may use this template in any manner you like. All I ask is that you leave
+                            the link back to my site at the bottom of the page.
+                        </h2>
+                        <br>
+                        <h3>Template Notes</h3> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
+                        
+                        <h3> <br> More information</h3> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
+                        <h3> <br>Template Notes</h3> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer style="height: 100px; color: #fff; text-align: center; line-height: 100px;">
+                <p>
+                    florida website design | web tutorials | html codes | free templates
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

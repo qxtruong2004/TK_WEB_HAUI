@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Ngày tháng năm sinh: </span> <select id="ngay"></select>
+    <span>tháng</span> <select id="thang"></select>
+    <span>năm</span> <select id="nam"></select>
+    <script>
+        //tao cac bien
+        var select_ngay = document.getElementById("ngay");
+        var select_thang = document.getElementById("thang");
+        var select_nam = document.getElementById("nam");
+        //tao tuy chon ngay
+        for(var i = 1; i <=31; i++){
+            var option = document.createElement("option");
+            option.text = i;
+            select_ngay.add(option);
+        }
+        //tao tuy chon thang
+        for(var i = 1; i <=12; i++){
+            var option = document.createElement("option");
+            option.text = i;
+            select_thang.add(option);
+        }
+        //tao tuy chon nam
+        var nowyear = new Date().getFullYear();
+        for(var i = 1990; i <= nowyear; i++){
+            var option = document.createElement("option");
+            option.text = i;
+            select_nam.add(option);
+        }
+        //hàm hiển thị lời chào khi trang web được tải
+        function loichao(){
+            alert("Xin chào mừng bạn đến với trang wed của chúng tôi");    
+        }
+        //Gọi hàm hiển thị lời chào khi trang web được tải
+        window.onload = loichao;
+    </script>
+</body>
+</html>

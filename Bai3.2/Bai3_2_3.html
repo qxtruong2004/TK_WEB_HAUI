@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2{
+        color: darkgreen;
+        text-align: center;
+    }
+    .text .text-title{
+        text-decoration: underline;
+    }
+    #red{
+        color: red;
+    }
+    .code{
+        background-color: #CCCCCC;
+        color: #0000CC;
+    }
+    .code .code-same{
+        text-indent: 500px;
+    }
+    .code .code-diff{
+        text-indent: 670px;
+    }
+</style>
+<body>
+    <h2>Định dạng văn bản</h2>
+    <p class="text">
+        <b class="text-title">Hóa học:</b>
+        <i>Nước</i>: 
+        <span id="red">H<sub>2</sub>O</span>
+        ;<i>Axit Sunfuric</i>:
+        <span id="red">H<sub>2</sub>SO<sub>4</sub></span> <br>
+
+        <b class="text-title">Toán học:</b>
+        <i>Phương trình bậc hai</i>: 
+        <span id="red">ax<sup>2</sup> + bx + c= 0</span> <br>
+
+        <b class="text-title">Tin học:</b>
+        <i>Vòng lặp for.</i>
+    </p>
+    <div class="code">
+        <p class="code-same">For i = 0 to 10</p>
+        <p class="code-diff">Tong = tong + 1</p>
+        <p class="code-same" >Next</p>
+    </div>
+</body>
+</html>

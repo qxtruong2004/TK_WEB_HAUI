@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label for="">Enter your email</label>
+        <input type="text" id=" name">
+        <button onclick="add()">Add more</button>
+    </p>
+
+    <script>
+        function add(){
+            var lbl = document.createElement("label");
+            lbl.innerHTML = "Enter your email";
+            var ip = document.createElement("input");
+            ip.type = "text";
+            var bt = document.createElement("button");
+            bt.type = "text";
+            bt.innerHTML = "Remove";
+
+
+            bt.addEventListener("click", function(){
+                //xoa
+                let p = bt.parentNode;
+                document.body.removeChild(p);
+            }
+        );
+
+            //tao ra the cha chua cac con
+            var p = document.createElement("p");
+            //gan vao cho cha
+            p.appendChild(lbl);
+            p.appendChild(ip);
+            p.appendChild(bt);
+
+            //bo sung p vao the body
+            document.body.appendChild(p)
+        }
+    </script>
+</body>
+</html>

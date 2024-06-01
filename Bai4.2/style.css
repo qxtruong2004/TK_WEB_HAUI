@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#header-img{
+    width: 100%;
+    height: 250px;
+    padding: 10px 10px;
+}
+.nav{
+    margin: 30px 100px 0 50px;
+    width: 90%;
+    height: 50px;
+    background-color: #1b9460;
+}
+.nav-menu{
+    list-style-type: none;
+    display: flex;
+}
+.nav-menu-text{
+    float: left;
+    color: red;
+    flex-grow: 1; /* can cho width  mỗi ô tổng bằng thẻ chứa nó*/
+    border-right: 1px dotted blue;
+    padding: 16px 0;
+    text-align: center;
+    position: relative;
+}
+.nav-menu-text:last-child{
+    border-right: none;
+}
+.menu-ver2{
+    position: absolute;
+    top: 105%;
+    background-color: #1b9460;
+    width: 220px;
+    display: none;
+}
+.menu-ver2-infor{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px dotted black;
+    margin-left: 25px;
+    list-style: circle;
+}
+.nav-menu-text:hover{
+    background-color: rgb(61, 60, 60);
+}
+.nav-menu-text:active .menu-ver2{
+    display: block;
+}
+.nav-sidebar-left{
+    float: left;
+    display: inline-block;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.nav-sidebar-left-list{
+    padding-left:35px;
+    margin-top: 20px;
+}
+.section__img{
+    margin-top: 50px;
+    float: left;
+    padding-right: 10px;
+}
+.section__img-link{
+    height: 200px;
+    width: 170px;
+    float: left;
+}
+.section-content{
+    margin-top: 50px;
+    display: inline-block;
+    width: 835px;
+}
+footer{
+    margin-top: 50px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+.footer-text{
+    padding: 5px 0px;
+}

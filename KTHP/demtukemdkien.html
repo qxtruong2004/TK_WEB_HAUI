@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr colspan="2">
+                <td>Nhập chuỗi: </td>
+                <td><input type="text" name="chuoi" id="chuoi"></td>
+            </tr>
+            <tr colspan="2">
+                <td>Số từ có 4 kí tự: </td>
+                <td><input type="text" name="rs" id="rs"></td>
+            </tr>
+            <tr colspan="1">
+                <td colspan="2">
+                    <button type="button" onclick="check()">Tim</button>
+                    <button type="button" onclick="huy()">Huy</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function check(){
+            let chuoi = document.getElementById("chuoi").value;
+            //cat chuoi thanh cac mang tu
+            let tu = chuoi.split(/\s+/);
+            let cnt = 0;
+            for (let i = 0; i < tu.length; i++){
+                if(tu[i].length == 4){
+                    cnt++;
+                }
+            }
+            document.getElementById("rs").value = cnt;
+        }
+        function huy(){
+            document.getElementById("chuoi").value = "";
+            document.getElementById("rs").value = "";
+
+        }
+    </script>
+</body>
+</html>

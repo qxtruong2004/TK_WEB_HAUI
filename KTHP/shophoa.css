@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hong_img{
+    width: 150px;
+    height: 200px;
+}
+.hong_name{
+    color: gray;
+}
+.hong_info:hover {
+    background-color: #FF33CC;
+    color: white;
+
+}
+.shop_hong{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto auto auto;
+}
+.hong_about_img{
+    margin-right: 20px;
+    width: 250px;
+    height: 300px;
+}
+.hong_about_title, .hong_about_text{
+    color: gray;
+}
+.hong_about {
+    display: none;
+    position: absolute; /* Định vị tuyệt đối */
+    width: 500px;
+    background-color: white; /* Màu nền */
+    z-index: 10; /* Đảm bảo phần tử hiển thị phía trên */
+}
+.hong_product{
+    position: relative;
+}
+
+.hong_product:hover .hong_about {
+    display: grid;
+    top: 0;
+    position: absolute; /* Thêm thuộc tính này nếu cần định vị chính xác */
+    background-color: white; /* Thêm màu nền nếu cần */
+    z-index: 10; /* Đảm bảo phần tử hiển thị phía trên */
+    grid-template-columns: auto 1fr; /* Hai cột: ảnh và nội dung */
+    align-items: center; /* Căn giữa theo trục dọc */
+}

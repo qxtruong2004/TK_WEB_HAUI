@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="calc">
+        <form action="">
+            <label for="">Nhập a </label>
+            <input type="text" id="a" name="a"> <br>
+            <label for="">Nhập b </label>
+            <input type="text" id="b" name="b"> <br>
+            <label for="">Nhập c </label>
+            <input type="text" id="c" name="c">
+            <button>Clear</button>
+            <button onclick="solver()">Sumbit</button>
+        </form>
+    </div>
+</body>
+<script>
+    function resert(){
+        document.getElementById("a").value = "";
+        document.getElementById("b").value = "";
+        document.getElementById("c").value = "";
+    }
+    function solver(){
+        let a = parseInt(document.getElementById("a").value); // lấy giá trị khi nhập vào ô text
+        let b = parseInt(document.getElementById("b").value);
+        let c = parseInt(document.getElementById("c").value);
+        let rs = document.getElementById("result");
+        let delta = b*b - 4*a*c;
+        console.log(delta);
+        if(delta == 0){
+            let x = -b/(2*a);
+            window.alert("Phương trình có nghiệm kép");
+        }
+        else if(delta > 0){
+            let x1 = (-b - Math.sqrt(delta)) / (2*a);
+            let x2 = (-b +  Math.sqrt(delta)) / (2*a);
+            window.alert("Phương trình có 2 nghiệm phân biệt x1 = " + x1 + ", x2 = " + x2);
+        }
+        else window.alert('Phương trình vô nghiệm');
+    }
+</script>
+</html>

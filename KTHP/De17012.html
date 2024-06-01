@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <img id="header-img" src="./Screenshot 2024-05-26 204754.png" alt="">
+        <input type="text" id="header-search" name="header-search" placeholder="Search">
+        <div class="header_text">
+            <span class="name">Shopping cart</span> <br>
+             <span class="about_name">0 items / $0.0</span>
+        </div>
+    </header>
+    <menu>
+        <ul class="menus">
+            <li class="menu_info"><a href="">GIỚI THIỆU</a></li>
+            <li class="menu_info"><a href="">DỊCH VỤ</a></li>
+            <li class="menu_info cha"><a href="">THỰC PHẨM TƯƠI SỐNG</a>
+                <ul class="con">
+                    <li class="con_list"><a href="">Rau, củ, quả</a></li>
+                    <li class="con_list"><a href="">Thịt Heo</a></li>
+                    <li class="con_list"><a href="">Cá</a></li>
+                    <li class="con_list"><a href="">Trứng</a></li>
+                    <li class="con_list"><a href="">Gia vị</a></li>
+                    <li class="con_list"><a href="">Thực phẩm khô</a></li>
+                </ul>
+            </li>
+            <li class="menu_info"><a href="">SUẤT ĂN CÔNG NGHIỆP</a></li>
+            <li class="menu_info"><a href="">TIN TỨC</a></li>
+            <li class="menu_info"><a href="">LIÊN HỆ</a></li>
+            <div class="menu_tim">
+                <input type="text " id="menu_search" name="menu_search" placeholder="Nhập từ khóa tìm kiếm">
+            </div>
+        </ul>
+        
+    </menu>
+    <div class="content">
+        <div class="content_left">
+            <input style="width: 100%;" type="text" id="content_left_search" placeholder="Tìm sản phẩm dịch vụ">
+            <p class="content_left_name" >RAU, CỦ, QUẢ TƯƠI</p>
+        </div>
+        <div class="content_right">
+            <!-- <hr class="content_right_hr"> -->
+            <div class="content_sp">
+                <div class="content_right_pr">
+                    <img src="./Screenshot 2024-05-26 204754.png" alt="" class="content_img">
+                    <p class="content_right_name">Cà chua</p>
+                </div>
+                <div class="content_right_pr">
+                    <img src="./Screenshot 2024-05-26 204754.png" alt="" class="content_img">
+                    <p class="content_right_name">Cà chua</p>
+                </div>
+                <div class="content_right_pr">
+                    <img src="./Screenshot 2024-05-26 204754.png" alt="" class="content_img">
+                    <p class="content_right_name">Cà chua</p>
+                </div>
+                <div class="content_right_pr">
+                    <img src="./Screenshot 2024-05-26 204754.png" alt="" class="content_img">
+                    <p class="content_right_name">Cà chua</p>
+                </div>
+                <div class="content_right_pr">
+                    <img src="./Screenshot 2024-05-26 204754.png" alt="" class="content_img">
+                    <p class="content_right_name">Cà chua</p>
+                </div>
+                <div class="content_right_pr">
+                    <img src="./Screenshot 2024-05-26 204754.png" alt="" class="content_img">
+                    <p class="content_right_name">Cà chua</p>
+                </div>
+                <div class="content_right_pr">
+                    <img src="./Screenshot 2024-05-26 204754.png" alt="" class="content_img">
+                    <p class="content_right_name">Cà chua</p>
+                </div>
+                <div class="content_right_pr">
+                    <img src="./Screenshot 2024-05-26 204754.png" alt="" class="content_img">
+                    <p class="content_right_name">Cà chua</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="btap">
+        <table>
+            <caption>Tìm từ dài nhất</caption>
+            <tr colspan="2">
+                <td>Nhập xâu: </td>
+                <td><input type="text" id="inputString"></td>
+            </tr>
+            <tr>
+                <td>Thông báo kết quả</td>
+                <td><input type="text" id="result"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="findLongestWord()">Tìm kiếm</button>
+                    <button onclick="clearFields()">Xóa</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function findLongestWord() {
+            const inputString = document.getElementById('inputString').value;
+            const words = inputString.split(' ');
+            let longestWord = '';
+            let position = -1;
+
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].length > longestWord.length) {
+                    longestWord = words[i];
+                    position = i;
+                }
+            }
+
+            const resultField = document.getElementById('result');
+            resultField.value = `Từ dài nhất: ${longestWord}, xuất hiện ở vị trí: ${position}`;
+        }
+        function clearFields() {
+            document.getElementById('inputString').value = '';
+            document.getElementById('result').value = '';
+        }
+
+    </script>
+</body>
+</html>

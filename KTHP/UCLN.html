@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr colspan="2">
+            <td>Nhập số thứ nhất: </td>
+            <td><input type="text" name="num1" id="num1"></td>
+        </tr>
+        <tr colspan="2">
+            <td>Nhập số thứ hai: </td>
+            <td><input type="text" name="num2" id="num2"></td>
+        </tr>
+        <tr colspan="2">
+            <td>UCLN của hai số trên là: </td>
+            <td><input type="text" name="rs" id="rs"></td>
+        </tr>
+        <tr colspan="1">
+            <td><button onclick="find()">Tìm</button></td>
+            <td><button onclick="destroy()">Hủy bỏ</button></td>
+        </tr>
+    </table>
+
+    <script>
+        function ucln(a, b){
+            let r = a % b;
+            while(r != 0){
+                a = b;
+                b = r;
+                r = a % b;
+            }
+            return b;
+        }
+        // function lcm(a, b) {
+        //     // Hàm tìm BCNN của hai số
+        //     return (a * b) / gcd(a, b); gcd là ucln
+        // }
+        function find(){
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2= parseInt(document.getElementById("num2").value);
+            let result = ucln(num1, num2);
+            document.getElementById("rs").value = result;s
+        }
+        function destroy(){
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("rs").value = "";
+
+        }
+    </script>
+</body>
+</html>

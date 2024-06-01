@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bật/Tắt Đèn</title>
+<style>
+    .bulb {
+        width: 100px;
+        height: 100px;
+        background-color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .bulb.on {
+        background-color: yellow;
+    }
+</style>
+</head>
+<body>
+<div class="bulb" id="bulb"></div>
+
+<script >
+// Lấy đối tượng đèn từ DOM
+const bulb = document.getElementById('bulb');
+
+// Thêm sự kiện click vào đối tượng đèn
+bulb.addEventListener('click', function() {
+    // Kiểm tra trạng thái hiện tại của đèn
+    if (bulb.classList.contains('on')) {
+        // Nếu đèn đang bật, tắt đèn
+        bulb.classList.remove('on');
+    } else {
+        // Nếu đèn đang tắt, bật đèn
+        bulb.classList.add('on');
+    }
+});
+</script>
+</body>
+</html>

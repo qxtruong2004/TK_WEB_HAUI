@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            padding-top: 50px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            width: 250px;
+            background-color: cornflowerblue;
+            margin: auto;
+            height: 100px;
+            justify-content: space-between;
+            align-content: space-around;
+        }
+        button{
+            height: 40px;
+            width: 40px;
+        }
+        .tron{
+            grid-column: 1/7;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="text" class="tron" id="result">
+        <button onclick="ghep('1')">1</button>
+        <button onclick="ghep('2')">2</button>
+        <button onclick="ghep('3')">3</button>
+        <button onclick="ghep('4')">4</button>
+        <button onclick="ghep('5')">5</button>
+        <button onclick="ghep('-')">-</button>
+        <button onclick="ghep('6')">6</button>
+        <button onclick="ghep('7')">7</button>
+        <button onclick="ghep('8')">8</button>
+        <button onclick="ghep('9')">9</button>
+        <button onclick="ghep('0')">9</button>
+        <button onclick="tinh()">=</button>
+        <button onclick="xoa()" class="tron">CLEAR</button>
+    </div>
+    <script>
+        let s = "";
+        let rong = "";
+        //mỗi lần click vào 1 giá trị thì chuyển s thành chuỗi
+        function ghep(v1){
+            s = s + v1;
+            document.getElementById("result").value = s;
+        }
+        function tinh(){
+            document.getElementById("result").value = s + " = " + eval(s);
+        }
+        function xoa(){
+            s = ""; // Đặt lại chuỗi s về chuỗi rỗng
+            document.getElementById('result').value = s;
+        }
+    </script>
+</body>
+</html>
